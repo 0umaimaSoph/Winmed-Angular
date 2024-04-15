@@ -12,6 +12,7 @@ import { TestimonialSectionComponent } from './testimonial-section/testimonial-s
 import { CallToActionSectionComponent } from './call-to-action-section/call-to-action-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { PricingCardComponent } from './pricing-card/pricing-card.component';
+import { TextBoxComponent } from './text-box/text-box.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PricingCardComponent } from './pricing-card/pricing-card.component';
     TestimonialSectionComponent,
     CallToActionSectionComponent,
     FooterComponent,
-    PricingCardComponent
+    PricingCardComponent,
+    TextBoxComponent
   ],
   imports: [
     BrowserModule,
