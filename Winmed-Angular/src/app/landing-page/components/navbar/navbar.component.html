@@ -8,7 +8,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Navbar content -->
-        <div  #collapse="ngbCollapse"  [(ngbCollapse)]="isCollapsed"
+        <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed"
             class="collapse navbar-collapse justify-content-center">
             <ul class="navbar-nav mb-2 mb-lg-0 text-uppercase justify-content-center">
                 <li class="nav-item">
@@ -27,9 +27,27 @@
         </div>
         <!-- Contact button aligned to the right -->
         <div class="ms-auto d-none d-lg-block">
-            <button class="btn rounded-4 text-white" style="background-color: var(--page-primary-color);">
+            <button class="btn rounded-4 text-white" (click)="open(content)"
+                style="background-color: var(--page-primary-color);">
                 Contactez-Nous
             </button>
+            <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header d-flex justify-content-between ">
+                    <h4 class="modal-title" id="modal-basic-title">Contact us</h4>
+                    <button type="button" class=" btn btn-danger close" aria-label="Close" (click)="d('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center  ">
+                    <div class="container">
+                            <app-contact-us-form></app-contact-us-form>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary  btn-lg" (click)="c('Save click')">Submit</button>
+                </div>
+            </ng-template>
         </div>
     </div>
 </nav>

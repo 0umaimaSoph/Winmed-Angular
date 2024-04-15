@@ -14,6 +14,7 @@ import { FooterComponent } from './landing-page/components/footer/footer.compone
 import { PricingCardComponent } from './shared/components/pricing-card/pricing-card.component';
 import { TextBoxComponent } from './shared/components/text-box/text-box.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ContactUsFormComponent } from './shared/components/contact-us-form/contact-us-form.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     FooterComponent,
     PricingCardComponent,
     TextBoxComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ContactUsFormComponent
   ],
   imports: [
     BrowserModule,
