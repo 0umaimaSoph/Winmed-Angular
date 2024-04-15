@@ -4,11 +4,11 @@
         <a class="navbar-brand" href="#">
             <img src="../../assets/public/logoWinmed.png" alt="logo" /> </a>
         <!-- Toggler button for mobile nav -->
-        <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
+        <button class="navbar-toggler" type="button" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed">
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Navbar content -->
-        <div  [ngbCollapse]="isCollapsed"
+        <div  #collapse="ngbCollapse"  [(ngbCollapse)]="isCollapsed"
             class="collapse navbar-collapse justify-content-center">
             <ul class="navbar-nav mb-2 mb-lg-0 text-uppercase justify-content-center">
                 <li class="nav-item">
