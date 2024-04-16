@@ -40,12 +40,21 @@
                 </div>
                 <div class="modal-body d-flex justify-content-center align-items-center  ">
                     <div class="container">
-                            <app-contact-us-form (formSubmitted)="handleFormSubmissionEvent($event, c)"></app-contact-us-form>
+                        <app-contact-us-form
+                            (formSubmitted)="handleFormSubmissionEvent($event, c)"></app-contact-us-form>
                     </div>
 
                 </div>
-               
+
+
             </ng-template>
+
         </div>
     </div>
 </nav>
+
+<div class="alert-container">
+    <div *ngIf="alertMessage" class="mt-2 z-3 ">
+        <ngb-alert [type]="alertType" (closed)="alertMessage=''">{{ alertMessage }}</ngb-alert>
+    </div>
+</div>

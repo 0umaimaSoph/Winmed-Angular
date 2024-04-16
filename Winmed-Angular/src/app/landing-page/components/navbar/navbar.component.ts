@@ -7,17 +7,22 @@ import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-handleFormSubmissionEvent(success: Boolean, closeFunc: Function) {
-  if (success) {
-    console.log('Form submission successful!!!');
-    
-    closeFunc()
-  } else {
-    console.log('Form submission failed!!!');
+  alertMessage: string = '';
+  alertType: 'success' | 'danger' = 'success';
 
-    alert('Form submission failed!')
+  handleFormSubmissionEvent(success: Boolean, closeFunc: Function) {
+    if (success) {
+      console.log('Form submission successful!!!');
+      this.alertMessage = 'Form submitted successfully';
+      this.alertType = 'success'
+      closeFunc();
+    } else {
+      console.log('Form submission failed!!!');
+      this.alertMessage = 'Failed to submit!!';
+      this.alertType = 'danger'
+      alert('Form submission failed!');
+    }
   }
-}
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
     config.backdrop = 'static';
     config.keyboard = false;

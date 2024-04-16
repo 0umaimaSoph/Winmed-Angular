@@ -1,5 +1,7 @@
+import { animation } from '@angular/animations';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NotificationService } from '@progress/kendo-angular-notification';
  
 @Component({
   selector: 'app-contact-us-form',
@@ -11,6 +13,7 @@ export class ContactUsFormComponent implements OnInit {
   contactForm!: FormGroup;
   submitted = false;
 
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -21,18 +24,18 @@ export class ContactUsFormComponent implements OnInit {
     })
   }
 
-  onSubmit() {
-    console.log('attempting form submission!', this.contactForm.value);   
-    console.log('form validity', this.contactForm.valid);   
 
+
+  onSubmit() {
     
     if(this.contactForm.valid) {
-      console.log('form submitted!', this.contactForm.value);   
       this.formSubmitted.emit(true)
+ 
     } else {
-      console.log('form not submitted!');
+     
       this.formSubmitted.emit(false)
       this.contactForm.markAllAsTouched()
+     
     }
   }
 

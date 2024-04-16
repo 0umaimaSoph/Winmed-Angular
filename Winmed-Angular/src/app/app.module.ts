@@ -1,3 +1,4 @@
+import { NotificationModule } from '@progress/kendo-angular-notification';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,6 +17,9 @@ import { TextBoxComponent } from './shared/components/text-box/text-box.componen
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactUsFormComponent } from './shared/components/contact-us-form/contact-us-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -36,7 +40,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NotificationModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
