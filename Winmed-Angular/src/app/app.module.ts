@@ -15,6 +15,7 @@ import { PricingCardComponent } from './shared/components/pricing-card/pricing-c
 import { TextBoxComponent } from './shared/components/text-box/text-box.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactUsFormComponent } from './shared/components/contact-us-form/contact-us-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ContactUsFormComponent } from './shared/components/contact-us-form/cont
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
