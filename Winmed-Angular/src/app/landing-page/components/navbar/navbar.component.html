@@ -12,17 +12,18 @@
             class="collapse navbar-collapse justify-content-center">
             <ul class="navbar-nav mb-2 mb-lg-0 text-uppercase justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    <a class="nav-link active" routerLink="/accueil" routerLinkActive="Active">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Fonctionnalités</a>
+                    <a class="nav-link" routerLink="/fonctionnalités" routerLinkActive="Active">Fonctionnalités</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tarifs</a>
+                    <a class="nav-link" routerLink="/tarifs" routerLinkActive="Active">Tarifs</a>
                 </li>
-                <li class="nav-item d-lg-none">
-                    <a class="nav-link" href="#">Contactez-Nous</a>
-                </li>
+                <button class="btn rounded-4 text-white my-3 mx-3 d- d-lg-none " (click)="open(content)"
+                style="background-color: var(--page-primary-color);">
+                Contactez-Nous
+            </button>
             </ul>
         </div>
         <!-- Contact button -->
@@ -58,3 +59,5 @@
         <ngb-alert [type]="alertType" (closed)="alertMessage=''">{{ alertMessage }}</ngb-alert>
     </div>
 </div>
+
+<router-outlet></router-outlet>

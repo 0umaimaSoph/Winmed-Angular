@@ -18,6 +18,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactUsFormComponent } from './shared/components/contact-us-form/contact-us-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing-module';
+import { FontionnalitesComponent } from './fontionnalites/fontionnalites.component';
 
 
 
@@ -35,10 +38,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PricingCardComponent,
     TextBoxComponent,
     LandingPageComponent,
-    ContactUsFormComponent
+    ContactUsFormComponent,
+    FontionnalitesComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule,
+    AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
     NotificationModule,
