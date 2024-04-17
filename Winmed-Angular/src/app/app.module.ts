@@ -18,7 +18,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactUsFormComponent } from './shared/components/contact-us-form/contact-us-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing-module';
 import { FontionnalitesComponent } from './fontionnalites/fontionnalites.component';
 import { GridModule } from '@progress/kendo-angular-grid';
