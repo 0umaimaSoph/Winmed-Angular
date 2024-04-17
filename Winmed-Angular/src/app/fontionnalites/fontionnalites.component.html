@@ -1,1 +1,5 @@
-<p>fontionnalites works!</p>
+<kendo-grid [data]="gridData | async" class="my-5">
+    <kendo-grid-column field="name" title="Name" [width]="120"></kendo-grid-column>
+    <kendo-grid-column field="email" title="Email" [width]="150"></kendo-grid-column>
+    <kendo-grid-column field="message" title="Message" [width]="250"></kendo-grid-column>
+  </kendo-grid>

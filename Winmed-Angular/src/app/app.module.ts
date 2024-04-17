@@ -21,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing-module';
 import { FontionnalitesComponent } from './fontionnalites/fontionnalites.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+
 
 
 
@@ -48,7 +50,8 @@ import { FontionnalitesComponent } from './fontionnalites/fontionnalites.compone
     NgbModule,
     ReactiveFormsModule,
     NotificationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,6 @@
-import { animation } from '@angular/animations';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NotificationService } from '@progress/kendo-angular-notification';
+import { DataService } from 'src/app/service/data.service';
  
 @Component({
   selector: 'app-contact-us-form',
@@ -14,7 +13,7 @@ export class ContactUsFormComponent implements OnInit {
   submitted = false;
 
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private dataService: DataService) { }
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
@@ -30,12 +29,11 @@ export class ContactUsFormComponent implements OnInit {
     
     if(this.contactForm.valid) {
       this.formSubmitted.emit(true)
- 
+      this.dataService.addMessages(this.contactForm.value)
+      this.contactForm.reset()
     } else {
-     
       this.formSubmitted.emit(false)
       this.contactForm.markAllAsTouched()
-     
     }
   }
 
