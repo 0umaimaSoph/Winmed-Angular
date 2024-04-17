@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PricingSectionComponent } from './landing-page/components/pricing-section/pricing-section.component';
-import { FontionnalitesComponent } from './fontionnalites/fontionnalites.component';
+import { FontionnalitesComponent } from './pages/fontionnalites/fontionnalites.component';
 import { HeroSectionComponent } from './landing-page/components/hero-section/hero-section.component';
-import { NavbarComponent } from './landing-page/components/navbar/navbar.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 const routes: Routes = [
   {

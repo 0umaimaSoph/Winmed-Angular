@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavbarComponent } from './landing-page/components/navbar/navbar.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HeroSectionComponent } from './landing-page/components/hero-section/hero-section.component';
 import { FunctionalitiesSectionComponent } from './landing-page/components/functionalities-section/functionalities-section.component';
 import { PerformanceSectionComponent } from './landing-page/components/performance-section/performance-section.component';
@@ -20,7 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing-module';
-import { FontionnalitesComponent } from './fontionnalites/fontionnalites.component';
+import { FontionnalitesComponent } from './pages/fontionnalites/fontionnalites.component';
 import { GridModule } from '@progress/kendo-angular-grid';
 
 

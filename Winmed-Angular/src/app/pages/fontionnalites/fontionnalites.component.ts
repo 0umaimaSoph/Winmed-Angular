@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ContactMessage } from '../model/Data.model';
-import { DataService } from '../service/data.service';
+import { ContactMessage } from '../../model/Data.model';
+import { DataService } from '../../service/data.service';
 
 @Component({
   selector: 'app-fontionnalites',
