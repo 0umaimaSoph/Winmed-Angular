@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { DataService } from 'src/app/service/data.service';
+import { DataService } from 'src/app/service/Data/data.service';
  
 @Component({
   selector: 'app-contact-us-form',

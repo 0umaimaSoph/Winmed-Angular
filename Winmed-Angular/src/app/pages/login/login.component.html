@@ -1,0 +1,26 @@
+<div class="container-fluid w-100 my-5" style="max-width: 500px;">
+    <div class=" gap-3 d-flex flex-column justify-content-center  ">
+        <div class="align-self-center">
+            <img src="../../../assets/public/logoWinmed.png" alt="Winmed">
+        </div>
+        <form [formGroup]="userFormGroup" (ngSubmit)="handleLogin()">
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" formControlName="email" name="email" class="form-control py-2" placeholder="Your email" >
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password">password</label>
+                <input type="password" name="password" formControlName="password"   placeholder="Enter your Password" class="form-control py-2">
+            </div>
+            <div class="form-group fw-medium my-3">
+                <button type="submit" class="btn text-white me-2" style="background-color: var(--page-primary-color);">
+                    Login
+                </button>
+                <a class="" style="color: var(--page-primary-color);"> register</a>
+            </div>
+        </form>
+       
+    </div>
+
+
+</div>

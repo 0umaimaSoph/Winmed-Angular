@@ -16,12 +16,13 @@ import { PricingCardComponent } from './shared/components/pricing-card/pricing-c
 import { TextBoxComponent } from './shared/components/text-box/text-box.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactUsFormComponent } from './shared/components/contact-us-form/contact-us-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing-module';
 import { FontionnalitesComponent } from './pages/fontionnalites/fontionnalites.component';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -41,7 +42,8 @@ import { GridModule } from '@progress/kendo-angular-grid';
     TextBoxComponent,
     LandingPageComponent,
     ContactUsFormComponent,
-    FontionnalitesComponent
+    FontionnalitesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { GridModule } from '@progress/kendo-angular-grid';
     ReactiveFormsModule,
     NotificationModule,
     BrowserAnimationsModule,
-    GridModule
+    GridModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

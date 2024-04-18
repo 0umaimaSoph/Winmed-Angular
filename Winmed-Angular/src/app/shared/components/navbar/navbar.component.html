@@ -12,26 +12,21 @@
             class="collapse navbar-collapse justify-content-center">
             <ul class="navbar-nav mb-2 mb-lg-0 text-uppercase justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" routerLink="/accueil" routerLinkActive="Active">Accueil</a>
+                    <a class="nav-link" routerLink="/accueil" routerLinkActive="Active">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/fonctionnalités" routerLinkActive="Active">Fonctionnalités</a>
+                    <a class="nav-link" routerLink="/messages" routerLinkActive="Active">Messages</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/tarifs" routerLinkActive="Active">Tarifs</a>
                 </li>
-                <button class="btn rounded-4 text-white my-3 mx-3 d- d-lg-none " (click)="open(content)"
-                style="background-color: var(--page-primary-color);">
-                Contactez-Nous
-            </button>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor: pointer;" (click)="open(content)">Contactez-nous</a>
+                </li>
             </ul>
         </div>
         <!-- Contact button -->
-        <div class="ms-auto d-none d-lg-block">
-            <button class="btn rounded-4 text-white" (click)="open(content)"
-                style="background-color: var(--page-primary-color);">
-                Contactez-Nous
-            </button>
+        <div class="ms-auto ">
             <ng-template #content let-c="close" let-d="dismiss">
                 <div class="modal-header d-flex justify-content-between ">
                     <h4 class="modal-title" id="modal-basic-title">Contact us</h4>
@@ -51,6 +46,17 @@
             </ng-template>
 
         </div>
+        <button class="btn  rounded-4 px-lg-5 text-white fw-medium my-3"
+            style="background-color: var(--page-primary-color);" (click)="hadleLogout()"
+            *ngIf="authService.isAuthenticated()">
+            Logout
+        </button>
+        <button class="btn  rounded-4 px-lg-5 text-white fw-medium my-3"
+        routerLink="/login" routerLinkActive="Active"
+            style="background-color: var(--page-primary-color);" 
+            *ngIf="!authService.isAuthenticated()">
+            Login
+        </button>
     </div>
 </nav>
 
@@ -58,6 +64,7 @@
     <div *ngIf="alertMessage" class="mt-2 z-3 ">
         <ngb-alert [type]="alertType" (closed)="alertMessage=''">{{ alertMessage }}</ngb-alert>
     </div>
+
 </div>
 
 <router-outlet></router-outlet>
