@@ -1,3 +1,4 @@
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NotificationModule } from '@progress/kendo-angular-notification';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +24,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { FontionnalitesComponent } from './pages/fontionnalites/fontionnalites.component';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthInterceptor } from './service/auth.interceptor';
 
 
 
@@ -55,8 +57,15 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserAnimationsModule,
     GridModule,
     FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

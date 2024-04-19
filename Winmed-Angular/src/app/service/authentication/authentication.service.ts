@@ -22,8 +22,8 @@ authenticatedUser: AppUser | undefined;
    public login(email: string, password: string): Observable<AppUser>{
     console.log("Login attempt with email:", email, "password:", password);
     let appUser = this.users.find(u => u.email == email)
-    if(!appUser) return throwError(() => new Error("user not found here"))
-    if(appUser.password != password) return throwError(() => new Error("wrong credentials"))
+    if(!appUser) return throwError(new Error("user not found here"))
+    if(appUser.password != password) return throwError( new Error("wrong credentials"))
     return of(appUser);
    }
 
@@ -45,5 +45,16 @@ authenticatedUser: AppUser | undefined;
     this.authenticatedUser = undefined;
     localStorage.removeItem("authUser")
     return of(true)
+   }
+
+
+   loadUser(){
+    const user = localStorage.getItem("authUser");
+
+    if (user) {
+      this.authenticatedUser = JSON.parse(user);
+    }
+
+
    }
 }
